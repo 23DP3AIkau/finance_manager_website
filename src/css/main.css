@@ -1,5 +1,8 @@
-/* General Styles */
-:root {
+/* ======================
+ Variables & Base Styles
+ ====================== */
+ :root {
+  /* Color Variables */
   --primary: #1DCD9F;
   --primary-dark: #169976;
   --bg: #000000;
@@ -11,6 +14,9 @@
   --terminal-text: #e0e0e0;
   --terminal-green: #1DCD9F;
   --terminal-prompt: #4CAF50;
+
+  /* Typography */
+  font-size: 1.15rem;
 }
 
 html {
@@ -29,14 +35,23 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: hidden;
+  font-size: 1.15rem;
 }
 
+/* =============
+   Typography
+   ============= */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
 
 span {
   color: var(--primary);
@@ -52,7 +67,40 @@ a:hover {
   color: var(--primary-dark);
 }
 
-/* Header & Navigation */
+/* =============
+   Layout
+   ============= */
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 8rem 2rem;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* =============
+   Header & Navigation
+   ============= */
 header {
   background: rgba(0, 0, 0, 0.8);
   color: var(--text);
@@ -69,9 +117,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .logo a {
@@ -120,15 +165,18 @@ header {
   cursor: pointer;
 }
 
-/* Buttons */
+/* =============
+   Buttons
+   ============= */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.9rem 1.8rem;
   border-radius: 6px;
   font-weight: 600;
+  font-size: 1.15rem;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
@@ -141,8 +189,8 @@ header {
 
 .btn-primary:hover {
   background: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(29, 205, 159, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(29, 205, 159, 0.4);
 }
 
 .btn-primary .fa-download {
@@ -160,168 +208,6 @@ header {
 
 .btn-primary:hover .download-text {
   color: var(--bg) !important;
-}
-
-.soon-text {
-  color: var(--bg) !important;
-}
-
-
-/* Increase main content width */
-.navbar, 
-.hero-content, 
-.features-grid, 
-.download-options, 
-.contact-container {
-  max-width: 1400px; /* Increased from 1200px */
-}
-
-/* Terminal window sizing */
-.terminal-window {
-  max-width: 900px; /* Increased from 800px */
-}
-
-/* Download button adjustments */
-.download-card .btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  padding: 0.8rem 1.5rem;
-}
-
-.download-text {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.soon-text {
-  font-size: 0.75rem;
-  font-weight: 400;
-  margin-top: 0.25rem;
-}
-
-/* Button hover effects */
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(29, 205, 159, 0.4);
-}
-
-/* Section padding adjustments */
-section {
-  padding: 8rem 3rem; /* Increased padding */
-}
-
-/* Hero section improvements */
-.hero h1 {
-  font-size: 4rem; /* Larger heading */
-  margin-bottom: 2rem;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem; /* Larger subtitle */
-  max-width: 800px;
-}
-
-/* Download Section Styling */
-.download-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-  max-width: 1200px;
-  margin: 0 auto 4rem;
-  padding: 0 2rem;
-}
-
-.download-card {
-  background: var(--card-bg);
-  border-radius: 12px;
-  padding: 2.5rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.download-card i {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary);
-}
-
-.download-card h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.5rem;
-  color: var(--text);
-}
-
-.download-card p {
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-  flex-grow: 1;
-}
-
-/* Download Button Fix */
-.download-btn {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  min-width: 160px;
-  padding: 0.8rem 1.8rem;
-}
-
-.download-btn .fa-download {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-}
-
-.download-btn .btn-text {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--bg);
-}
-
-.download-btn .soon-text {
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: var(--bg);
-  margin-top: 0.2rem;
-}
-
-.coming-soon {
-  background: #444 !important;
-}
-
-.coming-soon:hover {
-  transform: none !important;
-  box-shadow: none !important;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .download-options {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-  }
-  
-  .download-card {
-    padding: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .download-card {
-    padding: 1.5rem;
-  }
-  
-  .download-btn {
-    min-width: 140px;
-    padding: 0.7rem 1.5rem;
-  }
 }
 
 .btn-outline {
@@ -345,13 +231,9 @@ section {
   box-shadow: none !important;
 }
 
-.soon {
-  font-size: 0.8rem;
-  display: block;
-  margin-top: 0.3rem;
-}
-
-/* Hero Section */
+/* =============
+   Hero Section
+   ============= */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -359,7 +241,6 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 4rem 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -381,13 +262,13 @@ section {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 4.6rem;
   margin-bottom: 1.5rem;
   line-height: 1.1;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--text-secondary);
   margin-bottom: 2.5rem;
   max-width: 700px;
@@ -401,7 +282,9 @@ section {
   margin-top: 2rem;
 }
 
-/* Terminal Window */
+/* =============
+   Terminal Window
+   ============= */
 .terminal-window {
   background: var(--terminal-bg);
   border-radius: 8px;
@@ -411,10 +294,6 @@ section {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.terminal-window.small {
-  max-width: 600px;
 }
 
 .terminal-header {
@@ -442,7 +321,7 @@ section {
 .terminal-btn.green { background: #27c93f; }
 
 .terminal-title {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   font-family: 'Courier New', monospace;
 }
@@ -452,7 +331,8 @@ section {
   font-family: 'Courier New', monospace;
   color: var(--terminal-text);
   text-align: left;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 1.15rem;
 }
 
 .terminal-prompt {
@@ -464,36 +344,15 @@ pre {
   white-space: pre-wrap;
 }
 
-/* Sections */
-section {
-  padding: 6rem 2rem;
-  position: relative;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Cards */
+/* =============
+   Cards
+   ============= */
 .feature-card,
 .download-card,
 .contact-card {
   background: var(--card-bg);
-  border-radius: 10px;
-  padding: 2rem;
+  border-radius: 12px;
+  padding: 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
@@ -513,6 +372,7 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  min-width: 330px;
 }
 
 .download-card:hover {
@@ -528,26 +388,29 @@ section {
 }
 
 .download-card i {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .card-title {
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--text);
 }
 
 .card-text {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
+  font-size: 1.15rem;
 }
 
-/* Grid Layouts */
+/* =============
+   Grid Layouts
+   ============= */
 .features-grid,
 .download-options {
   display: grid;
-  gap: 2rem;
-  max-width: 1200px;
+  gap: 2.5rem;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -556,11 +419,44 @@ section {
 }
 
 .download-options {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   margin-bottom: 4rem;
 }
 
-/* Contact Section */
+/* =============
+   Download Section
+   ============= */
+.download-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 180px;
+  padding: 0.9rem 2rem;
+}
+
+.download-btn .fa-download {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.download-btn .btn-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--bg);
+}
+
+.download-btn .soon-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--bg);
+  margin-top: 0.2rem;
+}
+
+/* =============
+   Contact Section
+   ============= */
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -582,12 +478,12 @@ section {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 1.1rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   color: var(--text);
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .form-group textarea {
@@ -622,7 +518,7 @@ section {
 }
 
 .contact-card i {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
 }
@@ -635,17 +531,18 @@ section {
 .contact-card a {
   color: var(--text);
   display: block;
+  font-size: 1.1rem;
 }
 
 .social-links {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -663,7 +560,9 @@ section {
   object-fit: contain;
 }
 
-/* Language Switcher */
+/* =============
+   Language Switcher
+   ============= */
 .lang-switcher {
   position: relative;
   width: 150px;
@@ -726,20 +625,118 @@ section {
   color: var(--primary);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* =============
+   Install Guide
+   ============= */
+.install-guide {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.install-guide h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.terminal-window.small {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+
+/* Update the download card styles */
+.download-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 350px; /* Increased from 330px */
+  padding: 2.5rem 2rem; /* Adjusted padding */
+}
+
+/* Update the download button container */
+.download-btn-container {
+  width: 100%;
+  margin-top: auto; /* Pushes button to bottom */
+  padding-top: 1.5rem; /* Consistent spacing */
+}
+
+/* Update the download button styles */
+.download-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Makes buttons full width of card */
+  min-width: 200px; /* Increased width */
+  padding: 1rem 2rem; /* Larger padding */
+  margin-top: auto; /* Ensures alignment */
+}
+
+/* Update the responsive behavior */
+@media (max-width: 768px) {
+  .download-card {
+    min-width: auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .download-btn {
+    min-width: 180px;
+  }
+}
+
+
+/* ======================
+   Responsive Design
+   ====================== */
+@media (max-width: 1200px) {
   .hero h1 {
-    font-size: 2.8rem;
+    font-size: 4rem;
   }
   
   .section-title {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .download-options {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
     width: 95%;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+  
+  .logo-img {
+    height: 25px; 
+    margin-right: 8px;
   }
   
   .nav-links {
@@ -751,7 +748,7 @@ section {
     background: var(--bg-light);
     flex-direction: column;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   
@@ -764,7 +761,11 @@ section {
   }
   
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
   }
   
   .hero-buttons {
@@ -782,73 +783,92 @@ section {
   }
   
   section {
-    padding: 4rem 1rem;
+    padding: 6rem 1.5rem;
   }
   
   .terminal-window {
     width: 95%;
   }
   
-  .contact-container {
-    grid-template-columns: 1fr;
+  .download-card {
+    min-width: auto;
+    width: 100%;
   }
-
-  /* Smaller language button on mobile */
+  
   .lang-switcher {
-    width: 120px;
+    width: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .logo a {
+    font-size: 1.5rem; /* Reduced from 1.8rem */
+  }
+  
+  .logo-img {
+    height: 25px; /* Reduced from 30px */
+    margin-right: 8px; /* Adjusted spacing */
   }
 
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .download-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .download-btn {
+    min-width: 160px;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .lang-switcher {
+    width: 110px;
+  }
+  
   .lang-btn {
     padding: 0.5rem 0.8rem;
     font-size: 0.9rem;
   }
 }
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.8rem;
+@media (max-width: 400px) {
+
+  .logo a {
+    font-size: 1.5rem; /* Reduced from 1.8rem */
   }
   
-  .hero-subtitle {
-    font-size: 1rem;
+  .logo-img {
+    height: 25px; /* Reduced from 30px */
+    margin-right: 8px; /* Adjusted spacing */
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
   }
   
   .section-title {
     font-size: 1.8rem;
   }
   
-  .download-card h3 {
-    font-size: 1.3rem;
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
   }
-
-  /* Even smaller language button on very small devices */
-  .lang-switcher {
-    width: 100px;
-  }
-
-  .lang-btn {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.8rem;
-  }
-}
-
-.install-guide {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.install-guide h1 {
-  text-align: center;
-  width: 100%;
-}
-
-.terminal-window.small {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
