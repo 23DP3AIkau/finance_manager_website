@@ -145,6 +145,185 @@ header {
   box-shadow: 0 4px 12px rgba(29, 205, 159, 0.3);
 }
 
+.btn-primary .fa-download {
+  color: var(--bg) !important;
+}
+
+.btn-primary:hover .fa-download {
+  color: var(--bg) !important;
+}
+
+.download-text {
+  color: var(--bg) !important; 
+  transition: none !important; 
+}
+
+.btn-primary:hover .download-text {
+  color: var(--bg) !important;
+}
+
+.soon-text {
+  color: var(--bg) !important;
+}
+
+
+/* Increase main content width */
+.navbar, 
+.hero-content, 
+.features-grid, 
+.download-options, 
+.contact-container {
+  max-width: 1400px; /* Increased from 1200px */
+}
+
+/* Terminal window sizing */
+.terminal-window {
+  max-width: 900px; /* Increased from 800px */
+}
+
+/* Download button adjustments */
+.download-card .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0.8rem 1.5rem;
+}
+
+.download-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.soon-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+/* Button hover effects */
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(29, 205, 159, 0.4);
+}
+
+/* Section padding adjustments */
+section {
+  padding: 8rem 3rem; /* Increased padding */
+}
+
+/* Hero section improvements */
+.hero h1 {
+  font-size: 4rem; /* Larger heading */
+  margin-bottom: 2rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem; /* Larger subtitle */
+  max-width: 800px;
+}
+
+/* Download Section Styling */
+.download-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.download-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.download-card i {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.download-card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.download-card p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Download Button Fix */
+.download-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 160px;
+  padding: 0.8rem 1.8rem;
+}
+
+.download-btn .fa-download {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.download-btn .btn-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bg);
+}
+
+.download-btn .soon-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--bg);
+  margin-top: 0.2rem;
+}
+
+.coming-soon {
+  background: #444 !important;
+}
+
+.coming-soon:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .download-options {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  
+  .download-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-card {
+    padding: 1.5rem;
+  }
+  
+  .download-btn {
+    min-width: 140px;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
 .btn-outline {
   background: transparent;
   color: var(--primary);
@@ -227,7 +406,7 @@ header {
   background: var(--terminal-bg);
   border-radius: 8px;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto 0;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -655,6 +834,7 @@ section {
 
 .install-guide {
   text-align: center;
+  font-size: 15px;
   max-width: 800px;
   margin: 0 auto;
   display: flex;
@@ -662,7 +842,7 @@ section {
   align-items: center;
 }
 
-.install-guide h3 {
+.install-guide h1 {
   text-align: center;
   width: 100%;
 }
@@ -673,3 +853,419 @@ section {
 }
 
 
+/* General Styles */
+:root {
+  --primary: #1DCD9F;
+  --primary-dark: #169976;
+  --bg: #000000;
+  --bg-light: #111111;
+  --text: #ffffff;
+  --text-secondary: #aaaaaa;
+  --card-bg: rgba(30, 30, 30, 0.7);
+  --terminal-bg: #0a0a0a;
+  --terminal-text: #e0e0e0;
+  --terminal-green: #1DCD9F;
+  --terminal-prompt: #4CAF50;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px; /* Increased base font size */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7; /* Increased line height */
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+
+span {
+  color: var(--primary);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header & Navigation */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--text);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-size: 2rem; /* Larger logo */
+  font-weight: bold;
+  color: var(--text);
+}
+
+.logo-img {
+  height: 36px; /* Larger logo image */
+  margin-right: 12px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem; /* More spacing between nav items */
+}
+
+.nav-links a {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1.1rem; /* Larger nav text */
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--primary);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-size: 1.8rem; /* Larger mobile menu button */
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem; /* Larger buttons */
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem; /* Larger button text */
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--bg) !important;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(29, 205, 159, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.9rem 1.9rem;
+}
+
+.btn-outline:hover {
+  background: rgba(29, 205, 159, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Download Section */
+.download-section {
+  padding: 6rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-title {
+  font-size: 3rem; /* Larger section title */
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.4rem; /* Larger subtitle */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.download-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Wider cards */
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.download-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 3rem 2.5rem; /* More padding */
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.download-card i {
+  font-size: 4rem; /* Larger platform icons */
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.download-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem; /* Larger platform names */
+  color: var(--text);
+}
+
+.download-card p {
+  color: var(--text-secondary);
+  font-size: 1.2rem; /* Larger version text */
+  margin-bottom: 2.5rem;
+  flex-grow: 1;
+}
+
+.download-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 180px; /* Wider buttons */
+  padding: 1rem 2rem;
+}
+
+.download-btn .fa-download {
+  font-size: 1.4rem; /* Larger download icon */
+  margin-bottom: 0.5rem;
+}
+
+.download-btn .btn-text {
+  font-size: 1.2rem; /* Larger "Download" text */
+  font-weight: 600;
+  color: var(--bg);
+}
+
+.download-btn .soon-text {
+  font-size: 0.9rem; /* Slightly larger "Coming Soon" */
+  font-weight: 400;
+  color: var(--bg);
+  margin-top: 0.3rem;
+}
+
+.coming-soon {
+  background: #444 !important;
+  cursor: not-allowed;
+}
+
+.coming-soon:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Installation Guide */
+.install-guide {
+  text-align: center;
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+
+.install-guide h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.terminal-window {
+  background: var(--terminal-bg);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terminal-header {
+  background: var(--bg-light);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.terminal-btn {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.terminal-btn.red { background: #ff5f56; }
+.terminal-btn.yellow { background: #ffbd2e; }
+.terminal-btn.green { background: #27c93f; }
+
+.terminal-title {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-body {
+  padding: 2rem;
+  font-family: 'Courier New', monospace;
+  color: var(--terminal-text);
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.terminal-prompt {
+  color: var(--terminal-prompt);
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 95%;
+  }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-light);
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .download-options {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  
+  .download-card {
+    padding: 2.5rem 2rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .download-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .download-btn {
+    min-width: 160px;
+    padding: 0.9rem 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .terminal-body {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}
