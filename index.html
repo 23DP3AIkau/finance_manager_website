@@ -3,70 +3,213 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Webpage</title>
+    <title>Finance Manager - Terminal-based Financial Tool</title>
     <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="src/images/fm_logo.png" type="image/png">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-          <div class="logo">
-            <a href="#hero">MySite</a>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="#hero"><img src="src/images/fm_logo.png" alt="Finance Manager Logo" class="logo-img">Finance<span>Manager</span></a>
+      </div>
+      <nav class="nav-center">
+        <ul class="nav-links">
+          <li><a href="#hero" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#download" data-i18n="nav.download">Download</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn" id="language-toggle">
+          <span class="language-text">English</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="lang-dropdown">
+          <button class="lang-option" data-lang="en">English</button>
+          <button class="lang-option" data-lang="lv">Latviešu</button>
+        </div>
+      </div>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1 data-i18n="hero.title">Take Full Control<br>of Your <span>Finances</span></h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          Manage your income and expenses easily with Finance Manager. Track transactions, calculate totals, and set budgets – all in a simple terminal-based tool.
+        </p>
+        <div class="hero-buttons">
+          <a href="#download" class="btn btn-primary"><i class="fas fa-download"></i> <span data-i18n="hero.download">Download Now</span></a>
+          <a href="#about" class="btn btn-outline"><i class="fas fa-book-open"></i> <span data-i18n="hero.learn">Learn More</span></a>
+        </div>
+      </div>
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-buttons">
+            <span class="terminal-btn red"></span>
+            <span class="terminal-btn yellow"></span>
+            <span class="terminal-btn green"></span>
           </div>
-          <nav class="nav-center">
-            <ul class="nav-links">
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#download">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="lang-btn">
-            <button>Change Language</button>
+          <div class="terminal-title">finance-manager --help</div>
+        </div>
+        <div class="terminal-body">
+          <pre>
+            <span class="terminal-prompt">$</span> finance-manager --help
+            Usage: finance-manager [command]
+            Commands:
+              add [income|expense]    Add new transaction
+              list                   Show all transactions
+              stats                  Display statistics
+              budget                 Set budget limits
+              export                 Export data to CSV
+            Options:
+              -v, --version       Show version
+              -h, --help          Show this help
+            </pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="about.title">What is <span>Finance Manager</span>?</h2>
+        <p class="section-subtitle" data-i18n="about.subtitle">A lightweight terminal-based financial tool</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-terminal"></i>
+          </div>
+          <h3 data-i18n="about.feature1.title">Terminal-Based</h3>
+          <p data-i18n="about.feature1.text">Run directly from your command line for maximum efficiency and speed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 data-i18n="about.feature2.title">Real-Time Stats</h3>
+          <p data-i18n="about.feature2.text">Get instant insights into your financial health with comprehensive statistics.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3 data-i18n="about.feature3.title">Secure</h3>
+          <p data-i18n="about.feature3.text">Your financial data stays private on your local machine - no cloud storage.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="download.title">Get <span>Finance Manager</span></h2>
+        <p class="section-subtitle" data-i18n="download.subtitle">Available for all major platforms</p>
+      </div>
+      <div class="download-options">
+        <div class="download-card">
+          <i class="fab fa-windows"></i>
+          <h3 data-i18n="download.windows">Windows</h3>
+          <p data-i18n="download.windows-version">Windows 10/11 (64-bit)</p>
+          <button class="btn btn-primary coming-soon"><i class="fas fa-download"></i> <span data-i18n="download.download">Download</span> <span class="soon" data-i18n="download.soon">(Coming Soon)</span></button>
+        </div>
+        <div class="download-card">
+          <i class="fab fa-apple"></i>
+          <h3 data-i18n="download.macos">macOS</h3>
+          <p data-i18n="download.macos-version">macOS 10.15+ (Intel/Apple Silicon)</p>
+          <button class="btn btn-primary coming-soon"><i class="fas fa-download"></i> <span data-i18n="download.download">Download</span> <span class="soon" data-i18n="download.soon">(Coming Soon)</span></button>
+        </div>
+        <div class="download-card">
+          <i class="fab fa-linux"></i>
+          <h3 data-i18n="download.linux">Linux</h3>
+          <p data-i18n="download.linux-version">Debian/Ubuntu/Arch (x86_64)</p>
+          <button class="btn btn-primary coming-soon"><i class="fas fa-download"></i> <span data-i18n="download.download">Download</span> <span class="soon" data-i18n="download.soon">(Coming Soon)</span></button>
+        </div>
+      </div>
+      <div class="install-guide">
+        <h3 data-i18n="download.install">Installation Guide</h3>
+        <div class="terminal-window small">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="terminal-btn red"></span>
+              <span class="terminal-btn yellow"></span>
+              <span class="terminal-btn green"></span>
+            </div>
+          </div>
+          <div class="terminal-body">
+            <pre>
+              <span class="terminal-prompt">#</span> For Debian/Ubuntu:
+              $ sudo apt install ./finance-manager.deb
+              <span class="terminal-prompt">#</span> For macOS:
+              $ hdiutil mount finance-manager.dmg
+              $ cp -R /Volumes/FinanceManager/FinanceManager.app /Applications</pre>
           </div>
         </div>
-      </header>
-    <main>
-        <section class="hero" id="hero">
-          <div class="hero-content">
-            <h1>Take Full Control of Your Finances!</h1>
-            <p>
-              Manage your income and expenses easily with "Finance Manager". Track transactions, calculate totals, and set budgets – all in a simple terminal-based tool. <a href="">Download Now</a>
-            </p>
-            <a href="#about" class="btn" id="learn_more">Learn More</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="contact.title">Contact <span>Us</span></h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">We'd love to hear from you</p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <input type="text" id="name" placeholder=" " required>
+              <label for="name" data-i18n="contact.form.name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder=" " required>
+              <label for="email" data-i18n="contact.form.email">Email Address</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" placeholder=" " required></textarea>
+              <label for="message" data-i18n="contact.form.message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h3 data-i18n="contact.email">Email</h3>
+            <a href="mailto:A231195AI@rvt.lv">A231195AI@rvt.lv</a>
           </div>
-        </section>
-    
-        <hr class="section-divider">
-    
-        <section class="about" id="about">
-          <h2>What is “Finance Manager”?</h2>
-          <p>
-            "Finance Manager" is a lightweight terminal-based application that allows you to quickly add income and expenses, choose accounts, calculate totals, and set budgets—all through a straightforward command-line interface.
-          </p>
-        </section>
-    
-        <hr class="section-divider">
-    
-        <section class="download" id="download">
-          <h2>How to Use "Finance Manager"?</h2>
-          <p>
-            Download the application, launch your terminal, and manage your finances using simple commands. It’s efficient and easy to use.
-          </p>
-        </section>
-    
-        <hr class="section-divider">
-    
-        <section class="contact" id="contact">
-          <h2>Contact</h2>
-          <p>
-            Finance Manager – The Smart Solution for Your Financial Management.<br>
-            Contact: <a href="mailto:A231195AI@rvt.lv">A231195AI@rvt.lv</a> / <a href="https://github.com/23DP3AIkau">Github</a> | +371 123 4567
-          </p>
-          <p>Follow us</p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Alans Ikaunieks</p>
-    </footer>
+          <div class="contact-card">
+            <i class="fab fa-github"></i>
+            <h3 data-i18n="contact.github">GitHub</h3>
+            <a href="https://github.com/23DP3AIkau">23DP3AIkau</a>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <h3 data-i18n="contact.phone">Phone</h3>
+            <a href="tel:+3711234567">+371 123 4567</a>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-icon"><img src="src/images/Facebook_Logo_2023.png" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="src/images/X_logo_2023_(white).png" alt="X (Twitter)"></a>
+            <a href="#" class="social-icon"><img src="src/images/Instagram_icon.png" alt="Instagram"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-copyright" data-i18n="footer.copyright">
+        © 2025 Alans Ikaunieks. All rights reserved.
+      </div>
+    </div>
+  </footer>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
