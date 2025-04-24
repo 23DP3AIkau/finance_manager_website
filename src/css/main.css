@@ -117,6 +117,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Left section - Logo */
+.logo {
+  flex: 1;
+  min-width: 200px;
 }
 
 .logo a {
@@ -132,16 +141,28 @@ header {
   margin-right: 10px;
 }
 
+/* Center section - Navigation links */
+.nav-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -1rem; /* Fine adjustment for perfect centering */
 }
 
 .nav-links a {
   color: var(--text);
   font-weight: 500;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -159,6 +180,15 @@ header {
   width: 100%;
 }
 
+/* Right section - Language switcher */
+.lang-switcher {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 150px;
+}
+
+/* Mobile menu button */
 .mobile-menu-btn {
   display: none;
   font-size: 1.5rem;
@@ -372,7 +402,7 @@ pre {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-width: 330px;
+  min-width: 350px;
 }
 
 .download-card:hover {
@@ -403,6 +433,9 @@ pre {
   font-size: 1.15rem;
 }
 
+
+
+
 /* =============
    Grid Layouts
    ============= */
@@ -419,22 +452,29 @@ pre {
 }
 
 .download-options {
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   margin-bottom: 4rem;
 }
 
-/* =============
-   Download Section
-   ============= */
+/* Download Button Container */
+.download-btn-container {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
 .download-btn {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: auto;
-  min-width: 180px;
-  padding: 0.9rem 2rem;
+  width: 100%;
+  min-width: 200px;
+  padding: 1rem 2rem;
+  margin-top: auto; /* Ensures alignment */
 }
+
+
 
 .download-btn .fa-download {
   font-size: 1.3rem;
@@ -565,7 +605,6 @@ pre {
    ============= */
 .lang-switcher {
   position: relative;
-  width: 150px;
 }
 
 .lang-btn {
@@ -648,117 +687,139 @@ pre {
   max-width: 700px;
 }
 
-
-/* Update the download card styles */
-.download-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  min-width: 350px; /* Increased from 330px */
-  padding: 2.5rem 2rem; /* Adjusted padding */
+/* ======================
+   Responsive Design
+   ====================== */
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+  }
 }
 
-/* Update the download button container */
-.download-btn-container {
-  width: 100%;
-  margin-top: auto; /* Pushes button to bottom */
-  padding-top: 1.5rem; /* Consistent spacing */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .download-options {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
-/* Update the download button styles */
-.download-btn {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%; /* Makes buttons full width of card */
-  min-width: 200px; /* Increased width */
-  padding: 1rem 2rem; /* Larger padding */
-  margin-top: auto; /* Ensures alignment */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .logo {
+    order: 1;
+    flex: 1 0 auto;
+  }
+  
+  .mobile-menu-btn {
+    order: 2;
+    display: block;
+  }
+  
+  .nav-center {
+    order: 4;
+    flex: 1 0 100%;
+    display: none;
+  }
+  
+  .nav-center.active {
+    display: flex;
+  }
+  
+  .lang-switcher {
+    order: 3;
+    display: none;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    left: 0;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  section {
+    padding: 6rem 1.5rem;
+  }
+  
+  .download-card {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+  }
+  
+  .logo-img {
+    height: 25px;
+  }
 }
 
-
-/* Update the navbar layout */
-.navbar {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 2rem; /* Base gap between sections */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .download-btn {
+    min-width: 160px;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
 }
 
-/* Logo on the left */
-.logo {
-  justify-self: start;
-  margin-right: auto;
-}
-
-/* Navigation links centered */
-.nav-center {
-  justify-self: center;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem; /* Space between nav items */
-  margin: 0;
-  padding: 0;
-}
-
-/* Language switcher on the right */
-.lang-switcher {
-  justify-self: end;
-  margin-left: auto;
-  width: 150px;
-}
-
-/* Mobile menu adjustments */
-.mobile-menu-btn {
-  display: none;
-  justify-self: end;
-}
-
-/* Update the navbar layout */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-/* Logo on the left */
-.logo {
-  flex: 1;
-  min-width: 200px; /* Give logo some space */
-}
-
-/* Navigation links truly centered */
-.nav-center {
-  display: flex;
-  justify-content: center;
-  flex: 2; /* Takes more space to help centering */
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem; /* Space between nav items */
-  margin: 0;
-  padding: 0;
-  position: relative;
-  left: -1rem; /* Fine-tune centering */
-}
-
-/* Language switcher on the right */
-.lang-switcher {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  min-width: 50px;
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .nav-links {
+    gap: 0.75rem;
+  }
 }
