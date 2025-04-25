@@ -143,3 +143,4 @@ document.querySelector('.contact-form form').addEventListener('submit', function
     alert(message);
     this.reset();
 });
+

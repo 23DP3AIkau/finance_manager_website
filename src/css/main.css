@@ -1,7 +1,4 @@
-/* ======================
- Variables & Base Styles
- ====================== */
- :root {
+:root {
   /* Color Variables */
   --primary: #1DCD9F;
   --primary-dark: #169976;
@@ -14,8 +11,6 @@
   --terminal-text: #e0e0e0;
   --terminal-green: #1DCD9F;
   --terminal-prompt: #4CAF50;
-
-  /* Typography */
   font-size: 1.15rem;
 }
 
@@ -125,7 +120,7 @@ header {
 /* Left section - Logo */
 .logo {
   flex: 1;
-  min-width: 200px;
+  min-width: 180px;
 }
 
 .logo a {
@@ -471,7 +466,7 @@ pre {
   width: 100%;
   min-width: 200px;
   padding: 1rem 2rem;
-  margin-top: auto; /* Ensures alignment */
+  margin-top: auto;
 }
 
 
@@ -687,8 +682,58 @@ pre {
   max-width: 700px;
 }
 
+/*
+.mobile-menu-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+*/
+/* Mobile Dropdown Navigation (1200px and below) */
+@media (max-width: 1200px) {
+  .navbar {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+  
+  .logo {
+    order: 1;
+    flex: 1;
+  }
+  
+  .lang-switcher {
+    order: 2;
+    flex: 0;
+    margin-left: auto;
+    padding-right: 1rem;
+  }
+  /*
+  .mobile-menu-btn {
+    order: 3;
+    display: block;
+    padding-left: 1rem;
+  }
+  */
+  .nav-center {
+    order: 4;
+    flex: 0 0 100%;
+    display: none;
+  }
+}
+
+/* JavaScript for Dropdown Toggle */
+/* Add this to your script.js */
+
+
+/* Social Links Centering */
+@media (max-width: 768px) {
+  .social-links {
+    justify-content: center;
+  }
+}
+
 /* ======================
-   Responsive Design
+   Responsive Typography
    ====================== */
 @media (max-width: 1200px) {
   .hero h1 {
@@ -720,42 +765,6 @@ pre {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .logo {
-    order: 1;
-    flex: 1 0 auto;
-  }
-  
-  .mobile-menu-btn {
-    order: 2;
-    display: block;
-  }
-  
-  .nav-center {
-    order: 4;
-    flex: 1 0 100%;
-    display: none;
-  }
-  
-  .nav-center.active {
-    display: flex;
-  }
-  
-  .lang-switcher {
-    order: 3;
-    display: none;
-  }
-  
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    left: 0;
-  }
-  
   .hero h1 {
     font-size: 3rem;
   }
@@ -818,8 +827,19 @@ pre {
   .section-title {
     font-size: 1.8rem;
   }
+}
+
+@media (max-width: 470px) {
+
+  .logo {
+    min-width: 150px;
+  } 
+
+  .logo a {
+    font-size: 0.8rem;
+  }
   
-  .nav-links {
-    gap: 0.75rem;
+  .logo-img {
+    height: 15px;
   }
 }
