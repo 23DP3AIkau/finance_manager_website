@@ -1,15 +1,12 @@
-// Mobile menu toggle
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
     document.querySelector('.nav-links').classList.toggle('active');
 });
 
-// Language toggle functionality
 const languageToggle = document.getElementById('language-toggle');
 const languageText = document.querySelector('.language-text');
 const languageFlag = document.querySelector('.language-flag');
 let currentLanguage = 'en';
 
-// Enhanced translations object with navigation items
 const translations = {
     en: {
         "nav.home": "Home",
@@ -96,7 +93,6 @@ function changeLanguage(lang) {
     currentLanguage = lang;
     languageText.textContent = lang === 'en' ? 'English' : 'Latviešu';
     
-    // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang][key]) {
@@ -109,10 +105,8 @@ function changeLanguage(lang) {
     });
 }
 
-// Initialize with English
 changeLanguage('en');
 
-// Language dropdown functionality
 document.querySelectorAll('.lang-option').forEach(option => {
     option.addEventListener('click', function() {
         const lang = this.getAttribute('data-lang');
@@ -120,10 +114,8 @@ document.querySelectorAll('.lang-option').forEach(option => {
     });
 });
 
-// Initialize with English
 changeLanguage('en');
 
-// Make download buttons show coming soon message
 document.querySelectorAll('.coming-soon').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
@@ -134,7 +126,6 @@ document.querySelectorAll('.coming-soon').forEach(button => {
     });
 });
 
-// Form submission
 document.querySelector('.contact-form form').addEventListener('submit', function(e) {
     e.preventDefault();
     const message = currentLanguage === 'en'

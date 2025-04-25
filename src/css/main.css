@@ -689,7 +689,7 @@ pre {
   font-size: 1.5rem;
 }
 */
-/* Mobile Dropdown Navigation (1200px and below) */
+
 @media (max-width: 1200px) {
   .navbar {
     flex-wrap: wrap;
@@ -720,10 +720,6 @@ pre {
     display: none;
   }
 }
-
-/* JavaScript for Dropdown Toggle */
-/* Add this to your script.js */
-
 
 /* Social Links Centering */
 @media (max-width: 768px) {
