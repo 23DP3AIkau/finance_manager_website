@@ -14,15 +14,15 @@ const translations = {
         "nav.download": "Download",
         "nav.contact": "Contact",
         "hero.title": "Take Full Control<br>of Your <span>Finances</span>",
-        "hero.subtitle": "Manage your income and expenses easily with Finance Manager. Track transactions, calculate totals, and set budgets – all in a simple terminal-based tool.",
+        "hero.subtitle": "Manage your income and expenses easily with Finance Manager. Track transactions, calculate totals, and set budgets – all in a simple Windows Forms GUI interface.",
         "hero.download": "Download Now",
         "hero.learn": "Learn More",
         "about.title": "What is <span>Finance Manager</span>?",
-        "about.subtitle": "A lightweight terminal-based financial tool",
-        "about.feature1.title": "Terminal-Based",
-        "about.feature1.text": "Run directly from your command line for maximum efficiency and speed.",
+        "about.subtitle": "A lightweight Windows Forms GUI financial tool",
+        "about.feature1.title": "Windows Forms GUI",
+        "about.feature1.text": "Run .exe file for comfortable and easy to navigate interface.",
         "about.feature2.title": "Real-Time Stats",
-        "about.feature2.text": "Get instant insights into your financial health with comprehensive statistics.",
+        "about.feature2.text": "Get instant insights into your financial health with Overviews.",
         "about.feature3.title": "Secure",
         "about.feature3.text": "Your financial data stays private on your local machine - no cloud storage.",
         "download.title": "Get <span>Finance Manager</span>",
@@ -45,7 +45,13 @@ const translations = {
         "contact.email": "Email",
         "contact.github": "GitHub",
         "contact.phone": "Phone",
-        "footer.copyright": "© 2025 Alans Ikaunieks. All rights reserved."
+        "footer.copyright": "© 2025 Alans Ikaunieks. All rights reserved.",
+        "guide.title": "Installation Guide",
+        "guide.windows-title": "Windows Installation",
+        "guide.step1": "Download the App through website or <a href='https://github.com/23DP3AIkau/finance_manager/releases/latest' target='_blank'>Release</a>",
+        "guide.step2": "Extract <strong>all</strong> files",
+        "guide.step3": "Run <code>FinanceManager.exe</code>",
+        "guide.github-url": "https://github.com/23DP3AIkau/finance_manager/releases/latest"
     },
     lv: {
         "nav.home": "Sākums",
@@ -53,15 +59,15 @@ const translations = {
         "nav.download": "Lejupielādēt",
         "nav.contact": "Kontakti",
         "hero.title": "Pilnīga kontrole<br>pār saviem <span>Finansiem</span>",
-        "hero.subtitle": "Viegli pārvaldiet savus ienākumus un izdevumus ar Finance Manager. Sekojiet transakcijām, aprēķiniet kopsummas un noteikt budžetus – viss vienkāršā termināla rīkā.",
+        "hero.subtitle": "Viegli pārvaldiet savus ienākumus un izdevumus ar Finance Manager. Sekojiet transakcijām, aprēķiniet kopsummas un uzstādiet budžetus – viss vienkāršā Windows Forms lietojumprogrammā.",
         "hero.download": "Lejupielādēt",
         "hero.learn": "Uzzināt vairāk",
         "about.title": "Kas ir <span>Finance Manager</span>?",
-        "about.subtitle": "Viegls termināla finanšu rīks",
-        "about.feature1.title": "Termināla Rīks",
-        "about.feature1.text": "Darbiniet tieši no komandrindas maksimālai efektivitātei un ātrumam.",
+        "about.subtitle": "Viegls Windows Forms finanšu pārvaldības rīks",
+        "about.feature1.title": "Windows Forms GUI",
+        "about.feature1.text": "Palaidiet .exe failu, lai iegūtu ērtu un viegli lietojamu saskarni.",
         "about.feature2.title": "Reāllaika Statistika",
-        "about.feature2.text": "Iegūstiet tūlītēju ieskatu savā finansiālajā stāvoklī ar vispusīgu statistiku.",
+        "about.feature2.text": "Iegūstiet tūlītēju ieskatu savā finansiālajā stāvoklī ar pārskatiem.",
         "about.feature3.title": "Drošs",
         "about.feature3.text": "Jūsu finanšu dati paliek privāti jūsu lokālajā datorā - bez mākoņa glabāšanas.",
         "download.title": "Iegūstiet <span>Finance Manager</span>",
@@ -84,10 +90,15 @@ const translations = {
         "contact.email": "E-pasts",
         "contact.github": "GitHub",
         "contact.phone": "Tālrunis",
-        "footer.copyright": "© 2025 Alans Ikaunieks. Visas tiesības aizsargātas."
+        "footer.copyright": "© 2025 Alans Ikaunieks. Visas tiesības aizsargātas.",
+        "guide.title": "Instalēšanas instrukcija",
+        "guide.windows-title": "Instalēšana Windows",
+        "guide.step1": "Lejupielādējiet lietotni caur mājaslapu vai <a href='https://github.com/23DP3AIkau/finance_manager/releases/latest' target='_blank'>Release</a>",
+        "guide.step2": "Atarhivējiet <strong>visus</strong> failus",
+        "guide.step3": "Palaidiet <code>FinanceManager.exe</code>",
+        "guide.github-url": "https://github.com/23DP3AIkau/finance_manager/releases/latest"
     }
 };
-
 
 function changeLanguage(lang) {
     currentLanguage = lang;

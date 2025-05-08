@@ -43,36 +43,19 @@
       <div class="hero-content">
         <h1 data-i18n="hero.title">Take Full Control<br>of Your <span>Finances</span></h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">
-          Manage your income and expenses easily with Finance Manager. Track transactions, calculate totals, and set budgets – all in a simple terminal-based tool.
+          Manage your income and expenses easily with Finance Manager. Track transactions, calculate totals, and set budgets – all in a simple Windows Forms application.
         </p>
         <div class="hero-buttons">
           <a href="#download" class="btn btn-primary"><i class="fas fa-download"></i> <span class="download-text" data-i18n="hero.download">Download Now</span></a>
           <a href="#about" class="btn btn-outline"><i class="fas fa-book-open"></i> <span data-i18n="hero.learn">Learn More</span></a>
         </div>
       </div>
-      <div class="terminal-window">
-        <div class="terminal-header">
-          <div class="terminal-buttons">
-            <span class="terminal-btn red"></span>
-            <span class="terminal-btn yellow"></span>
-            <span class="terminal-btn green"></span>
-          </div>
-          <div class="terminal-title">finance-manager --help</div>
+      <div class="hero-images">
+        <div class="image-placeholder">
+          <img src="src/images/app1.png" alt="Finance Manager Screenshot 1" class="app-screenshot">
         </div>
-        <div class="terminal-body">
-          <pre>
-            <span class="terminal-prompt">$</span> finance-manager --help
-            Usage: finance-manager [command]
-            Commands:
-              add [income|expense]   Add new transaction
-              list                   Show all transactions
-              stats                  Display statistics
-              budget                 Set budget limits
-              export                 Export data to CSV
-            Options:
-              -v, --version       Show version
-              -h, --help          Show this help
-            </pre>
+        <div class="image-placeholder">
+          <img src="src/images/app2.png" alt="Finance Manager Screenshot 2" class="app-screenshot">
         </div>
       </div>
     </section>
@@ -85,10 +68,10 @@
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-terminal"></i>
+            <i class="fas fa-window-maximize"></i> 
           </div>
-          <h3 data-i18n="about.feature1.title">Terminal-Based</h3>
-          <p data-i18n="about.feature1.text">Run directly from your command line for maximum efficiency and speed.</p>
+          <h3 data-i18n="about.feature1.title">Windows Forms GUI</h3>
+          <p data-i18n="about.feature1.text">User-friendly graphical interface with familiar Windows controls for easy financial management.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -118,7 +101,7 @@
           <i class="fab fa-windows"></i>
           <h3 data-i18n="download.windows">Windows</h3>
           <p data-i18n="download.windows-version">Windows 10/11 (64-bit)</p>
-          <a href="src/app/FinanceManager_1.0.zip" class="btn btn-primary download-btn" download="FinanceManager_Windows.zip">
+          <a href="src/app/FinanceManager_1.2.zip" class="btn btn-primary download-btn" download="FinanceManager_Windows.zip">
             <i class="fas fa-download"></i>
             <span class="btn-text" data-i18n="download.download">Download</span>
           </a>
@@ -129,8 +112,8 @@
           <p data-i18n="download.macos-version">macOS 10.15+ (Intel/Apple Silicon)</p>
           <button class="btn btn-primary download-btn coming-soon">
             <i class="fas fa-download"></i>
-            <span class="btn-text">Download</span>
-            <span class="soon-text">(Coming Soon)</span>
+            <span class="btn-text" data-i18n="download.download">Download</span>
+            <span class="soon-text" data-i18n="download.soon">(Coming Soon)</span>
           </button>    
         </div>
         <div class="download-card">
@@ -139,26 +122,23 @@
           <p data-i18n="download.linux-version">Debian/Ubuntu/Arch (x86_64)</p>
           <button class="btn btn-primary download-btn coming-soon">
             <i class="fas fa-download"></i>
-            <span class="btn-text">Download</span>
-            <span class="soon-text">(Coming Soon)</span>
+            <span class="btn-text" data-i18n="download.download">Download</span>
+            <span class="soon-text" data-i18n="download.soon">(Coming Soon)</span>
           </button>
         </div>
       </div>
       <div class="install-guide">
-        <h2 data-i18n="download.install">Installation Guide</h2>
-        <div class="terminal-window">
-          <div class="terminal-header">
-            <div class="terminal-buttons">
-              <span class="terminal-btn red"></span>
-              <span class="terminal-btn yellow"></span>
-              <span class="terminal-btn green"></span>
-            </div>
+        <h2 data-i18n="guide.title"></h2>
+        <div class="guide-card">
+          <div class="guide-icon">
+            <i class="fas fa-download"></i>
           </div>
-          <div class="terminal-body">
-            <pre>
-              <span class="terminal-prompt">#</span> Coming Soon
-            </pre>
-          </div>
+          <h3 data-i18n="guide.windows-title"></h3>
+          <ol class="guide-steps">
+            <li data-i18n="guide.step1" data-i18n-params="guide.github-url"></li>
+            <li data-i18n="guide.step2"></li>
+            <li data-i18n="guide.step3"></li>
+          </ol>
         </div>
       </div>
     </section>

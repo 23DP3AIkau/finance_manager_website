@@ -760,6 +760,7 @@ pre {
   }
 }
 
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3rem;
@@ -838,4 +839,192 @@ pre {
   .logo-img {
     height: 15px;
   }
+}
+
+/* For tablets and small laptops */
+@media (max-width: 992px) {
+  .hero-images {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .image-placeholder {
+    flex: 1;
+    max-width: calc(50% - 0.75rem); /* Account for gap */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    margin-bottom: 2rem;
+  }
+  .hero-images {
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+  .image-placeholder {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-images {
+    gap: 1rem;
+  }
+  .app-screenshot {
+    border-radius: 6px; 
+  }
+}
+
+.guide-card {
+  margin: 2rem auto 0; 
+  width: 90%; 
+  max-width: 600px; 
+}
+
+
+@media (max-width: 768px) {
+  .guide-card {
+    width: 95%; 
+    padding: 2rem; 
+  }
+}
+
+@media (max-width: 576px) {
+  .guide-card {
+    padding: 1.5rem; 
+  }
+  
+  .guide-steps {
+    padding-left: 1rem; 
+  }
+}
+
+
+.hero-images {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.image-placeholder {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.image-placeholder:hover {
+  transform: translateY(-5px);
+}
+
+.app-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Installation Guide Card */
+.guide-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.installation-steps {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.installation-steps li {
+  margin-bottom: 1rem;
+}
+
+.installation-steps a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.installation-steps code {
+  background: rgba(29, 205, 159, 0.2);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Installation Guide Styles */
+.install-guide {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.guide-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+}
+
+.guide-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.guide-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.guide-steps {
+  text-align: left;
+  padding-left: 1.5rem;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.guide-steps li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.guide-steps a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.guide-steps a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.guide-steps code {
+  background: rgba(29, 205, 159, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: var(--primary);
+  font-size: 0.9em;
 }
