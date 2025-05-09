@@ -51,6 +51,7 @@ const translations = {
         "guide.step1": "Download the App through website or <a href='https://github.com/23DP3AIkau/finance_manager/releases/latest' target='_blank'>Release</a>",
         "guide.step2": "Extract <strong>all</strong> files",
         "guide.step3": "Run <code>FinanceManager.exe</code>",
+        "guide.step4": "<a href='https://github.com/23DP3AIkau/finance_manager/blob/main/README.md' targer='_blank'>User Guide</a>",
         "guide.github-url": "https://github.com/23DP3AIkau/finance_manager/releases/latest"
     },
     lv: {
@@ -96,6 +97,7 @@ const translations = {
         "guide.step1": "Lejupielādējiet lietotni caur mājaslapu vai <a href='https://github.com/23DP3AIkau/finance_manager/releases/latest' target='_blank'>Release</a>",
         "guide.step2": "Atarhivējiet <strong>visus</strong> failus",
         "guide.step3": "Palaidiet <code>FinanceManager.exe</code>",
+        "guide.step4": "<a href='https://github.com/23DP3AIkau/finance_manager/blob/main/README.md' targer='_blank'>Lietotāja ceļvedis</a>",
         "guide.github-url": "https://github.com/23DP3AIkau/finance_manager/releases/latest"
     }
 };
